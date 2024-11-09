@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP Dining - Culinary Excellence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .entry-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background: linear-gradient(to right, #6a0dad, #8b00ff);
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .entry-button {
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #8b00ff, #6a0dad);
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .entry-button:hover {
+            background: linear-gradient(90deg, #6a0dad, #8b00ff);
+            transform: scale(1.1);
+        }
+
+        .entry-button:focus {
+            outline: none;
+        }
+
+        .entry-logo {
+            width: 150px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header {
+            background: linear-gradient(to right, #6a0dad, #8b00ff);
+            padding: 10px 0;  /* Reduced padding */
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header-logo {
+            width: 80px;  /* Smaller logo size */
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        .slick-carousel {
+            margin-top: 0;
+        }
+
+        .slick-slide img {
+            border-radius: 15px;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 1s ease;
+        }
+
+        .slick-prev, .slick-next {
+            z-index: 1;
+            color: white;
+        }
+
+        .slick-slide img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .bg-image {
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: transform 0.5s ease;
+        }
+
+        .bg-image:hover {
+            transform: scale(1.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2, h3 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        /* Footer Styles */
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .footer-logos img {
+            width: 100px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .footer-logos img:hover {
+            transform: scale(1.1);
+            filter: brightness(0) saturate(100%) invert(35%) sepia(100%) saturate(744%) hue-rotate(171deg) brightness(106%) contrast(101%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <div class="entry-page" id="entry-page">
+        <img src="logo.png" alt="JP Dining Logo" class="entry-logo" />
+        <button class="entry-button" id="enter-btn">Enter Website</button>
+        <div class="entry-carousel"></div>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <header class="header shadow-lg py-8 text-center">
+            <img src="logo.png" alt="JP Dining Logo" class="header-logo" />
+            <h1 class="text-4xl font-playfair text-white">JP Dining</h1>
+            <p class="text-lg text-white mt-2">Culinary Excellence for Every Occasion</p>
+        </header>
+
+        <main class="container mx-auto mt-10 px-4">
+            <section class="mb-10">
+                <div class="slick-carousel">
+                    <div><img src="index1.jpg" alt="Gourmet Dish 1" /></div>
+                    <div><img src="index2.jpg" alt="Gourmet Dish 2" /></div>
+                    <div><img src="index3.jpg" alt="Gourmet Dish 3" /></div>
+                    <div><img src="index4.jpg" alt="Gourmet Dish 4" /></div>
+                    <div><img src="index5.jpg" alt="Gourmet Dish 5" /></div>
+                    <div><img src="index6.jpg" alt="Gourmet Dish 6" /></div>
+                </div>
+            </section>
+
+            <section class="fade-in mt-12">
+                <h2 class="font-playfair text-4xl mb-6">Meet Our Executive Chef</h2>
+                <p>
+                    Elliot Johnson-Paul, Executive Chef and owner of JP Dining, has a distinguished culinary background. 
+                    Starting at 15 years old, he trained at the renowned Petersham Hotel, later earning prestigious scholarships 
+                    and training at the world-famous Intercontinental Park Lane. His culinary expertise spans across modern British cuisine, 
+                    with a strong influence from his Anglo-Indian heritage. Elliot has worked at Claridge’s Hotel and established his own company, JP Dining, 
+                    which now serves high-profile clients worldwide. His work has been featured for royalty and UHNWI, making every dish an extraordinary experience.
+                </p>
+            </section>
+
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div class="bg-image fade-in" style="background-image: url('index2.jpg');">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Signature Dish 1</h3>
+                        <p class="text-sm">A delightful blend of flavors.</p>
+                    </div>
+                </div>
+                <div class="bg-image fade-in" style="background-image: url('index3.jpg');">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Signature Dish 2</h3>
+                        <p class="text-sm">A culinary masterpiece.</p>
+                    </div>
+                </div>
+                <div class="bg-image fade-in" style="background-image: url('index4.jpg');">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Signature Dish 3</h3>
+                        <p class="text-sm">An exquisite taste experience.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="text-center mt-10">
+                <h2 class="text-4xl font-playfair mb-4">Our Culinary Philosophy</h2>
+                <p class="text-lg text-gray-700">At JP Dining, we believe in using the finest ingredients to create unforgettable culinary experiences. Our dishes are crafted with passion and precision, ensuring every bite is a delight.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="bg-white shadow-lg mt-16 py-6">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-600 mb-4">© 2024 JP Dining. All Rights Reserved.</p>
+            <div class="footer-logos">
+                <img src="marinarinaldi.png" alt="Marina Rinaldi" />
+                <img src="porsche.jpg" alt="Porsche" />
+                <img src="brioni.png" alt="Brioni" />
+                <img src="boodles.jpg" alt="Boodles" />
+            </div>
+        </div>
+    </footer>
+
+    <audio id="entry-audio" src="your-audio-file.mp3"></audio>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.slick-carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 800,
+                cssEase: 'ease',
+                fade: true
+            });
+
+            const enterBtn = document.getElementById('enter-btn');
+            const entryPage = document.getElementById('entry-page');
+            const mainContent = document.getElementById('main-content');
+            const entryAudio = document.getElementById('entry-audio');
+
+            enterBtn.addEventListener('click', function() {
+                entryAudio.play();
+                setTimeout(function() {
+                    entryPage.style.display = 'none';
+                    mainContent.style.display = 'block';
+                }, 1000);
+            });
+
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+
+            fadeElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
